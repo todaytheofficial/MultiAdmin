@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiAdmin</title>
+    <link rel="icon" href="/images/logo.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+   <!-- Шапка -->
+<header class="header" id="header">
+    <div class="container">
+        <a href="#" class="logo">
+            <img src="/images/logo.jpg" alt="MultiAdmin" class="logo-img">
+            <span>MultiAdmin</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="#features">Функции</a>
+            <a href="#rarities">Карточки</a>
+            <a href="#commands">Команды</a>
+        </nav>
+
+        <div class="header-actions">
+            <!-- Кнопка смены темы -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">
+                <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+
+            <a href="https://t.me/MultiAdministator_bot" target="_blank" class="btn btn-primary">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                </svg>
+                Добавить бота
+            </a>
+        </div>
+
+        <button class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+    <!-- Мобильное меню -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <button class="theme-toggle" id="themeToggleMobile" aria-label="Сменить тему">
+            <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <span class="theme-label">Тёмная тема</span>
+        </button>
+    </div>
+    <a href="#features">Функции</a>
+    <a href="#rarities">Карточки</a>
+    <a href="#commands">Команды</a>
+    <a href="https://t.me/MultiAdministator_bot" target="_blank" class="btn btn-primary">Добавить бота</a>
+</div>
+
+    <!-- 3D Баннер с карточкой -->
+    <section class="card-banner">
+        <div class="banner-particles"></div>
+        <div class="container">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <div class="hero-badge">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Бесплатно
+                    </div>
+                    <h1>Управляй группой <span class="text-gradient">легко</span></h1>
+                    <p>Модерация, коллекционные карточки, PvP арена, ежедневные квесты — всё в одном Telegram боте</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="https://t.me/MultiAdministator_bot" target="_blank" class="btn btn-primary btn-lg">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                            </svg>
+                            Запустить бота
+                        </a>
+                        <a href="#features" class="btn btn-outline btn-lg">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3D Карточка с пасхалкой -->
+                <div class="floating-card-wrapper">
+                    <div class="floating-card" id="floatingCard">
+                        <div class="card-inner">
+                            <!-- Передняя сторона - card.jpg -->
+                            <div class="card-front">
+                                <div class="card-glow"></div>
+                                <div class="card-shine"></div>
+                                <div class="card-border-glow"></div>
+                                <img src="/images/card.jpg" alt="MultiAdmin Card" class="card-full-image">
+                            </div>
+                            
+                            <!-- Задняя сторона - pashalka.jpg -->
+                            <div class="card-back">
+                                <div class="card-back-image">
+                                    <img src="/images/pashalka.jpg" alt="Easter Egg" class="card-full-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Декоративные элементы -->
+                    <div class="card-sparkles">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="stat-groups">—</span>
+                        <span class="stat-label">групп</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="stat-users">—</span>
+                        <span class="stat-label">игроков</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M12 8v8M8 12h8"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="stat-cards">—</span>
+                        <span class="stat-label">карточек</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="stat-battles">—</span>
+                        <span class="stat-label">боёв</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Функции -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Что умеет бот</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Модерация</h3>
+                    <p>Варны, муты, баны с таймерами. Автоматическое снятие наказаний. Система рангов для модераторов.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon--purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M12 8v8M8 12h8"/>
+                        </svg>
+                    </div>
+                    <h3>Карточки</h3>
+                    <p>Крути карты 7 редкостей. Собирай коллекцию из 30+ персонажей. Система гарантий (pity).</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon--red">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>PvP Арена</h3>
+                    <p>Сражайся картами с другими игроками. Криты, уклонения. Рейтинговая система и топы.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon--orange">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>Квесты</h3>
+                    <p>4 уникальных задания каждый день. Награды за выполнение: монеты и билеты.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon--green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
+                        </svg>
+                    </div>
+                    <h3>Магазин</h3>
+                    <p>Покупай билеты и щиты за монеты. Продавай карты другим игрокам на рынке.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon--gold">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Профили</h3>
+                    <p>Статистика побед и поражений. Коллекция карт. Рейтинги и топы игроков.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Редкости карт -->
+    <section class="rarities" id="rarities">
+        <div class="container">
+            <h2 class="section-title">Редкости карточек</h2>
+            <p class="section-desc">Чем реже карта — тем она сильнее в бою</p>
+
+            <div class="rarity-list">
+                <div class="rarity-item rarity-common">
+                    <div class="rarity-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <span class="rarity-name">Common</span>
+                    <span class="rarity-chance">40%</span>
+                </div>
+                <div class="rarity-item rarity-rare">
+                    <div class="rarity-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <span class="rarity-name">Rare</span>
+                    <span class="rarity-chance">30%</span>
+                </div>
+                <div class="rarity-item rarity-epic">
+                    <div class="rarity-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <span class="rarity-name">Epic</span>
+                    <span class="rarity-chance">10%</span>
+                </div>
+                <div class="rarity-item rarity-legendary">
+                    <div class="rarity-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                    </div>
+                    <span class="rarity-name">Legendary</span>
+                    <span class="rarity-chance">2%</span>
+                </div>
+                <div class="rarity-item rarity-mythic">
+                    <div class="rarity-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <span class="rarity-name">Mythic</span>
+                    <span class="rarity-chance">0.9%</span>
+                </div>
+                <div class="rarity-item rarity-special">
+                    <div class="rarity-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7-6.3-4.6L5.7 21l2.3-7-6-4.6h7.6z"/>
+                        </svg>
+                    </div>
+                    <span class="rarity-name">Special</span>
+                    <span class="rarity-chance">0.25%</span>
+                </div>
+                <div class="rarity-item rarity-mega">
+                    <div class="rarity-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <span class="rarity-name">MEGA</span>
+                    <span class="rarity-chance">0.1%</span>
+                </div>
+            </div>
+
+            <div class="pity-box">
+                <div class="pity-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="3"/>
+                        <line x1="12" y1="2" x2="12" y2="5"/>
+                        <line x1="12" y1="19" x2="12" y2="22"/>
+                        <line x1="2" y1="12" x2="5" y2="12"/>
+                        <line x1="19" y1="12" x2="22" y2="12"/>
+                    </svg>
+                </div>
+                <div class="pity-content">
+                    <strong>Система гарантий (Pity)</strong>
+                    <p>Epic гарантирована каждые 15 спинов, Legendary — 40, Mythic — 100</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Команды -->
+    <section class="commands" id="commands">
+        <div class="container">
+            <h2 class="section-title">Основные команды</h2>
+
+            <div class="commands-tabs">
+                <button class="tab-btn active" data-tab="cards">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="M12 8v8M8 12h8"/>
+                    </svg>
+                    Карточки
+                </button>
+                <button class="tab-btn" data-tab="arena">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    Арена
+                </button>
+                <button class="tab-btn" data-tab="mod">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    Модерация
+                </button>
+                <button class="tab-btn" data-tab="other">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+                    </svg>
+                    Разное
+                </button>
+            </div>
+
+            <div class="commands-content">
+                <div class="tab-panel active" id="tab-cards">
+                    <div class="cmd"><code>/spin</code> прокрутить карту</div>
+                    <div class="cmd"><code>/multispin 10</code> мультиспин</div>
+                    <div class="cmd"><code>/mycards</code> мои карты</div>
+                    <div class="cmd"><code>/collection</code> статистика</div>
+                    <div class="cmd"><code>/ticket</code> бесплатный билет</div>
+                    <div class="cmd"><code>/pity</code> счётчики гарантий</div>
+                    <div class="cmd"><code>/card Gojo</code> инфо о карте</div>
+                    <div class="cmd"><code>/limited</code> лимитированные карты</div>
+                </div>
+
+                <div class="tab-panel" id="tab-arena">
+                    <div class="cmd"><code>/arena</code> встать в очередь</div>
+                    <div class="cmd"><code>/setdeck</code> выбрать карты</div>
+                    <div class="cmd"><code>/mydeck</code> посмотреть колоду</div>
+                    <div class="cmd"><code>/rating</code> топ игроков</div>
+                    <div class="cmd"><code>/profile</code> профиль</div>
+                    <div class="cmd"><code>/setbio</code> изменить описание</div>
+                </div>
+
+                <div class="tab-panel" id="tab-mod">
+                    <div class="cmd"><code>/warn</code> предупредить</div>
+                    <div class="cmd"><code>/mute 1h</code> замутить</div>
+                    <div class="cmd"><code>/ban 1d</code> забанить</div>
+                    <div class="cmd"><code>/kick</code> выгнать</div>
+                    <div class="cmd"><code>/warns</code> список варнов</div>
+                    <div class="cmd"><code>/rules</code> правила</div>
+                    <div class="cmd"><code>/promote</code> повысить ранг</div>
+                </div>
+
+                <div class="tab-panel" id="tab-other">
+                    <div class="cmd"><code>/daily</code> ежедневная награда</div>
+                    <div class="cmd"><code>/quests</code> квесты</div>
+                    <div class="cmd"><code>/market</code> магазин</div>
+                    <div class="cmd"><code>/balance</code> баланс</div>
+                    <div class="cmd"><code>/top</code> рейтинги</div>
+                    <div class="cmd"><code>/promo</code> промокод</div>
+                    <div class="cmd"><code>/help</code> все команды</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Готов начать?</h2>
+            <p>Добавь бота в группу — это займёт 10 секунд</p>
+            <a href="https://t.me/MultiAdministator_bot" target="_blank" class="btn btn-white btn-lg">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                </svg>
+                Добавить MultiAdmin
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="/images/logo.jpg" alt="MultiAdmin" class="footer-logo">
+                    <span>MultiAdmin</span>
+                </div>
+
+                <div class="footer-links">
+                    <a href="https://t.me/MultiAdministator_bot" target="_blank">Бот</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 MultiAdmin.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

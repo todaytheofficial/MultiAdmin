@@ -1,0 +1,17 @@
+{
+  "groups": 17,
+  "users": 55,
+  "total_cards": 1907,
+  "battles": 170,
+  "cards_by_rarity": {
+    "rare": 524,
+    "common": 976,
+    "mythic": 39,
+    "special": 26,
+    "epic": 206,
+    "legendary": 77,
+    "limited": 50,
+    "mega": 9
+  },
+  "updated_at": "2026-02-26T19:48:53.933049"
+}
